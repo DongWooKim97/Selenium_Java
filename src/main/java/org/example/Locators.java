@@ -29,6 +29,15 @@ public class Locators {
         // Id -> tagname#id -> input#inputUsername
         // 만약 HTML에 클래스 name이나 id가 없으면? -> Tagname[attribute='value']
         // Input[placeholder='Username']
-//        driver.quit();
+
+
+        //  XPath
+        // Example, Tagname[@attribute='value']
+        // <input type="text" placeholder="Name"> -> 이러한 태그가 있다면 아래와 같이 사용해야한다.
+        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("John");
+
+
+        // driver.quit();
+        // driver.close();
     }
 }
